@@ -1,0 +1,63 @@
+#
+# Noctalia v5 — native Wayland desktop shell (C++23 / meson)
+# SPDX-License-Identifier: MPL-2.0
+#
+name        : noctalia
+version     : "5.0.0-beta.6"
+release     : 2
+homepage    : https://github.com/noctalia-dev/noctalia
+upstreams   :
+    - https://github.com/noctalia-dev/noctalia/releases/download/v5.0.0-beta.6/noctalia-v5.0.0-beta.6.tar.gz : 06878dade76282701af83e0db4de2b332cfa7a0815e70dbf92f9854e1cc3f074
+    - https://raw.githubusercontent.com/nothings/stb/31c1ad37456438565541f4919958214b6e762fb4/stb_image_resize2.h:
+        hash: 173e654634f6ccaad98f603e686ea212eec1fe8ea6d2a5e5e8056efa10ae3880
+        unpack: false
+    - https://raw.githubusercontent.com/nothings/stb/31c1ad37456438565541f4919958214b6e762fb4/stb_image_write.h:
+        hash: cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05
+        unpack: false
+summary     : A sleek and minimal desktop shell thoughtfully crafted for Wayland
+description : |
+    Noctalia is a native Wayland desktop shell providing the shell layer around
+    your compositor: bars, widgets, dock, launcher, control center, notifications,
+    wallpaper, lock screen, clipboard history, OSDs and tray integration. Built
+    directly on Wayland and OpenGL ES with no Qt or GTK dependency.
+license     :
+    - MIT
+builddeps   :
+    - pkgconfig(epoxy)
+    - pkgconfig(fontconfig)
+    - pkgconfig(freetype2)
+    - pkgconfig(jemalloc)
+    - pkgconfig(libjxl)
+    - pkgconfig(libpipewire-0.3)
+    - pkgconfig(libqalculate)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libsodium)
+    - pkgconfig(libwebp)
+    - pkgconfig(md4c)
+    - pkgconfig(nlohmann_json)
+    - pkgconfig(pam)
+    - pkgconfig(pangocairo)
+    - pkgconfig(polkit-agent-1)
+    - pkgconfig(sdbus-c++)
+    - pkgconfig(tomlplusplus)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(wireplumber-0.5)
+    - pkgconfig(xkbregistry)
+rundeps     :
+    - gpu-screen-recorder
+    - power-profiles-daemon
+    - upower
+    - wl-clipboard-rs
+setup       : |
+    mkdir -p stb-include/stb
+    cp %(sourcedir)/stb_image_resize2.h stb-include/stb/
+    cp %(sourcedir)/stb_image_write.h stb-include/stb/
+    export CFLAGS="${CFLAGS:-} -I$(pwd)/stb-include"
+    export CXXFLAGS="${CXXFLAGS:-} -I$(pwd)/stb-include"
+    %meson -Djemalloc=enabled -Dtests=disabled
+build       : |
+    %meson_build
+install     : |
+    %meson_install

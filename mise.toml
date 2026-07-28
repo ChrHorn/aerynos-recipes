@@ -1,0 +1,18 @@
+[tasks.create-local]
+description = "Create and init the locsl AerynOS repo"
+run = """
+mkdir -p ~/.cache/local_repo/x86_64
+moss index ~/.cache/local_repo/x86_64
+sudo moss repo add local "file://$HOME/.cache/local_repo/x86_64/stone.index" -p 100
+"""
+
+[tasks.build]
+description = "Build an AerynOS recipe"
+usage = '''
+arg "<dir>" help="directory with the .stone file" default="."
+'''
+run = """
+boulder build --compiler-cache --output ~/.cache/local_repo/x86_64 ${usage_dir?}
+moss index ~/.cache/local_repo/x86_64
+"""
+
