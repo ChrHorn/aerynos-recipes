@@ -15,7 +15,8 @@
 				"pkgconfig(wayland-client)",
 				"pkgconfig(wayland-protocols)",
 				"pkgconfig(wlroots-0.20)",
-				"pkgconfig(xkbcommon)"
+				"pkgconfig(xkbcommon)",
+				"stb"
 			],
 			"depends": [
 				"greetd",
@@ -73,6 +74,6 @@
 		}
 	},
 	"source-name": "noctalia-greeter",
-	"source-release": "2",
+	"source-release": "3",
 	"source-version": "1.1.0"
 }

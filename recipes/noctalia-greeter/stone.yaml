@@ -1,12 +1,9 @@
 name        : noctalia-greeter
 version     : "1.1.0"
-release     : 2
+release     : 3
 homepage    : https://github.com/noctalia-dev/noctalia-greeter
 upstreams   :
     - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.1.0.tar.gz : 771d21b811cca5c8da965da11bacd972ae5ed57419947c9b8bfdafcfcf628f9b
-    - https://raw.githubusercontent.com/nothings/stb/31c1ad37456438565541f4919958214b6e762fb4/stb_image_resize2.h:
-        hash: 173e654634f6ccaad98f603e686ea212eec1fe8ea6d2a5e5e8056efa10ae3880
-        unpack: false
 summary     : UPDATE SUMMARY
 description : |
     UPDATE DESCRIPTION
@@ -24,11 +21,10 @@ builddeps   :
     - pkgconfig(wlroots-0.20)
     - pkgconfig(xkbcommon)
     - pkgconfig(libwebp)
+    - stb
 rundeps     :
     - greetd
 setup       : |
-    mkdir -p /usr/include/stb
-    cp %(sourcedir)/stb_image_resize2.h /usr/include/stb/
     %meson
 build       : |
     %meson_build
