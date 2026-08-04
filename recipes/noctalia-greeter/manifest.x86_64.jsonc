@@ -52,7 +52,9 @@
 				"/usr/bin/noctalia-greeter-compositor",
 				"/usr/bin/noctalia-greeter-print-greetd-config",
 				"/usr/bin/noctalia-greeter-session",
+				"/usr/lib/systemd/system/noctalia-greeter.service",
 				"/usr/lib/tmpfiles.d/noctalia-greeter.conf",
+				"/usr/share/greetd/noctalia-greeter.toml",
 				"/usr/share/noctalia-greeter/assets/fonts/tabler-icons-license.txt",
 				"/usr/share/noctalia-greeter/assets/fonts/tabler.json",
 				"/usr/share/noctalia-greeter/assets/fonts/tabler.ttf",
@@ -74,6 +76,6 @@
 		}
 	},
 	"source-name": "noctalia-greeter",
-	"source-release": "3",
+	"source-release": "4",
 	"source-version": "1.1.0"
 }
