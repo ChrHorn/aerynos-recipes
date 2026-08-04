@@ -1,6 +1,6 @@
 name        : noctalia-greeter
 version     : "1.1.0"
-release     : 4
+release     : 6
 homepage    : https://github.com/noctalia-dev/noctalia-greeter
 upstreams   :
     - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.1.0.tar.gz : 771d21b811cca5c8da965da11bacd972ae5ed57419947c9b8bfdafcfcf628f9b
@@ -23,14 +23,20 @@ builddeps   :
     - pkgconfig(libwebp)
     - stb
 rundeps     :
+    - dbus
     - greetd
+    - polkit
 setup       : |
     %meson
 build       : |
     %meson_build
 install     : |
-    # systemd bits
+    %meson_install
+
+    # Systemd bits
     %install_file %(pkgdir)/noctalia-greeter.service %(installroot)%(libdir)/systemd/system/noctalia-greeter.service
     %install_file %(pkgdir)/noctalia-greeter.toml %(installroot)%(datadir)/greetd/noctalia-greeter.toml
 
-    %meson_install
+    # Override tmpfile config created by meson to use the correct user
+    rm -f %(installroot)%(tmpfilesdir)/noctalia-greeter.conf
+    %tmpfiles 'd /var/lib/noctalia-greeter 0750 greetd greetd -'
