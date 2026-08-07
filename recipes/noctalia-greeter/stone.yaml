@@ -1,12 +1,12 @@
 name        : noctalia-greeter
-version     : "1.1.0"
-release     : 6
+version     : "1.2.1"
+release     : 7
 homepage    : https://github.com/noctalia-dev/noctalia-greeter
 upstreams   :
-    - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.1.0.tar.gz : 771d21b811cca5c8da965da11bacd972ae5ed57419947c9b8bfdafcfcf628f9b
-summary     : A minimal login greeter for greetd that matches the look and feel of Noctalia Shell.
+    - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.2.1.tar.gz : 1d1c43494b74e75f4f18c5c0d2f5326b9b3b30f337156c05c45d4511a9a587e1
+summary     : Login greeter that matches the look and feel of Noctalia Shell.
 description : |
-    UPDATE DESCRIPTION
+    
 license     : MIT
 builddeps   :
     - pkgconfig(cairo)
