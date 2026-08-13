@@ -5,7 +5,6 @@
 		"difftastic": {
 			"build-depends": [
 				"binary(cargo)",
-				"binary(git)",
 				"binary(make)"
 			],
 			"depends": [

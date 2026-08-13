@@ -6,11 +6,12 @@ upstreams   :
     - https://github.com/Wilfred/difftastic/archive/refs/tags/0.70.0.tar.gz : 4f89fdce7f58eb0521c14c14a7f76144dab5aa01400b332dd8710b550d32dc4c
 summary     : Structural diff tool that compares files based on their syntax.
 description : |
-    UPDATE DESCRIPTION
+    Difftastic is a CLI diff tool that compares files based on their syntax,
+    not line-by-line. Difftastic produces accurate diffs that are easier for humans
+    to read. 
 license     : MIT
 builddeps   :
     - binary(cargo)
-    - binary(git)
     - binary(make)
 networking  : true
 setup       : |

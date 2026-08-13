@@ -23,8 +23,7 @@ builddeps   :
     - pkgconfig(libwebp)
     - stb
 rundeps     :
-    - dbus
-    - greetd
+    - binary(greetd)
     - polkit
 setup       : |
     %meson
