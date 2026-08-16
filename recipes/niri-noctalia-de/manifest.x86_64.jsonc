@@ -1,0 +1,23 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"niri-noctalia-de": {
+			"depends": [
+				"binary(foot)",
+				"binary(niri)",
+				"binary(noctalia)",
+				"os-artwork"
+			],
+			"files": [
+				"/usr/share/niri-noctalia/niri/config.kdl",
+				"/usr/share/niri-noctalia/noctalia/aerynOS.toml",
+				"/usr/share/user-tmpfiles.d/niri-noctalia.conf"
+			],
+			"name": "niri-noctalia-de"
+		}
+	},
+	"source-name": "niri-noctalia-de",
+	"source-release": "1",
+	"source-version": "0.1.0"
+}

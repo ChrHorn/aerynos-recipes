@@ -1,0 +1,22 @@
+name        : niri-noctalia-de
+version     : "0.1.0"
+release     : 1
+homepage    : ""
+summary     : Niri Noctalia desktop environment
+description : |
+    
+license     : MIT
+rundeps     :
+    - binary(foot)
+    - binary(niri)
+    - binary(noctalia)
+    - os-artwork
+install     : |
+    # Default Niri config
+    %install_file %(pkgdir)/niri/config.kdl %(installroot)%(datadir)/niri-noctalia/niri/config.kdl
+
+    # Default Noctalia config
+    %install_file %(pkgdir)/noctalia/aerynOS.toml %(installroot)%(datadir)/niri-noctalia/noctalia/aerynOS.toml
+
+    # Init default configs with user-tmpfiles
+    %install_file %(pkgdir)/user-tmpfiles.d/niri-noctalia.conf %(installroot)%(datadir)/user-tmpfiles.d/niri-noctalia.conf
