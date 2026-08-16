@@ -16,7 +16,7 @@ install     : |
     %install_file %(pkgdir)/niri/config.kdl %(installroot)%(datadir)/niri-noctalia/niri/config.kdl
 
     # Default Noctalia config
-    %install_file %(pkgdir)/noctalia/aerynOS.toml %(installroot)%(datadir)/niri-noctalia/noctalia/aerynOS.toml
+    %install_file %(pkgdir)/noctalia/config.toml %(installroot)%(datadir)/niri-noctalia/noctalia/config.toml
 
     # Init default configs with user-tmpfiles
     %install_file %(pkgdir)/user-tmpfiles.d/niri-noctalia.conf %(installroot)%(datadir)/user-tmpfiles.d/niri-noctalia.conf
