@@ -18,5 +18,8 @@ install     : |
     # Default Noctalia config
     %install_file %(pkgdir)/noctalia/config.toml %(installroot)%(datadir)/niri-noctalia/noctalia/config.toml
 
+    # Default foot config
+    %install_file %(pkgdir)/foot/foot.ini %(installroot)%(datadir)/niri-noctalia/foot/foot.ini
+
     # Init default configs with user-tmpfiles
     %install_file %(pkgdir)/user-tmpfiles.d/niri-noctalia.conf %(installroot)%(datadir)/user-tmpfiles.d/niri-noctalia.conf

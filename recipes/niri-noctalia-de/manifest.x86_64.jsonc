@@ -10,8 +10,9 @@
 				"os-artwork"
 			],
 			"files": [
+				"/usr/share/niri-noctalia/foot/foot.ini",
 				"/usr/share/niri-noctalia/niri/config.kdl",
-				"/usr/share/niri-noctalia/noctalia/aerynOS.toml",
+				"/usr/share/niri-noctalia/noctalia/config.toml",
 				"/usr/share/user-tmpfiles.d/niri-noctalia.conf"
 			],
 			"name": "niri-noctalia-de"
