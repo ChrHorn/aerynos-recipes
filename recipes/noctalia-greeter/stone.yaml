@@ -1,6 +1,6 @@
 name        : noctalia-greeter
 version     : "1.2.1"
-release     : 7
+release     : 8
 homepage    : https://github.com/noctalia-dev/noctalia-greeter
 upstreams   :
     - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.2.1.tar.gz : 1d1c43494b74e75f4f18c5c0d2f5326b9b3b30f337156c05c45d4511a9a587e1

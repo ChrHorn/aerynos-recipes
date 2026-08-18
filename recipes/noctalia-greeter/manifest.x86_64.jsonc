@@ -19,8 +19,7 @@
 				"stb"
 			],
 			"depends": [
-				"dbus",
-				"greetd",
+				"binary(greetd)",
 				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
 				"polkit",
 				"soname(libEGL.so.1(x86_64))",
@@ -78,6 +77,6 @@
 		}
 	},
 	"source-name": "noctalia-greeter",
-	"source-release": "7",
+	"source-release": "8",
 	"source-version": "1.2.1"
 }
