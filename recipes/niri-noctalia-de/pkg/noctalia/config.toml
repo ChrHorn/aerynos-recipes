@@ -1,2 +1,37 @@
+[bar.default]
+start = [ "launcher", "workspaces" ]
+end = [ "tray", "keyboard_layout", "network", "bluetooth", "volume", "battery", "notifications", "session" ]
+
 [wallpaper]
 directory = "/usr/share/backgrounds/aerynos"
+
+[osd.kinds]
+media = false
+
+[shell]
+polkit_agent = true
+
+[widget.battery]
+hide_when_full = true
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
+[widget.keyboard_layout]
+hide_when_single_layout = true
+
+[widget.launcher]
+glyph = "grid-dots"
+
+[widget.network]
+show_label = false
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+mute_color = "on_surface"
+show_label = false
+
+[widget.workspaces]
+show_labels = false
