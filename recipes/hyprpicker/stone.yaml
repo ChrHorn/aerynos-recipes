@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : hyprpicker
+version     : "0.4.7"
+release     : 3
+homepage    : https://github.com/hyprwm/hyprpicker
+license     : BSD-3-Clause
+upstreams   :
+    - https://github.com/hyprwm/hyprpicker/archive/refs/tags/v0.4.7.tar.gz : cde02b92abe372187c9d59a7cb2ca07ede5c3e1a8c81ed8b209dc0d3ac5f0339
+summary     : Wlroots-compatible Wayland color picker 
+description : |
+    A wlroots-compatible Wayland color picker .
+builddeps   :
+    - pkgconfig(cairo)
+    - pkgconfig(hyprutils)
+    - pkgconfig(hyprwayland-scanner)
+    - pkgconfig(libjpeg)
+    - pkgconfig(pango)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(xkbcommon)
+setup       : |
+    %cmake
+build       : |
+    %cmake_build
+install     : |
+    %cmake_install
