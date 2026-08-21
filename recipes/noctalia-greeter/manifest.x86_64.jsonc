@@ -15,7 +15,6 @@
 				"pkgconfig(wayland-client)",
 				"pkgconfig(wayland-protocols)",
 				"pkgconfig(wlroots-0.20)",
-				"pkgconfig(xkbcommon)",
 				"stb"
 			],
 			"depends": [

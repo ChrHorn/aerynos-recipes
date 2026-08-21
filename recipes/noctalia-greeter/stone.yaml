@@ -13,14 +13,13 @@ builddeps   :
     - pkgconfig(fontconfig)
     - pkgconfig(freetype2)
     - pkgconfig(librsvg-2.0)
+    - pkgconfig(libwebp)
     - pkgconfig(nlohmann_json)
     - pkgconfig(pango)
     - pkgconfig(tomlplusplus)
     - pkgconfig(wayland-client)
     - pkgconfig(wayland-protocols)
     - pkgconfig(wlroots-0.20)
-    - pkgconfig(xkbcommon)
-    - pkgconfig(libwebp)
     - stb
 rundeps     :
     - binary(greetd)
