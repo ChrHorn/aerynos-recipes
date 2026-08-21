@@ -13,11 +13,11 @@ build_file := join(invocation_directory(), "stone.yaml")
 local_repo := env('LOCAL_REPO', '${HOME}/.cache/local_repo/x86_64')
 
 # Build the stone.yaml recipe using boulder
-_build target:
-    cd {{ invocation_directory() }}; {{boulder}} build {{boulder_args}} -u {{ if path_exists(target) == "true" { target } else { error("Missing stone.yaml file") } }} -p {{ boulder_profile }}
+_build target *args:
+    cd {{ invocation_directory() }}; {{boulder}} build {{args}} {{boulder_args}} -u {{ if path_exists(target) == "true" { target } else { error("Missing stone.yaml file") } }} -p {{ boulder_profile }}
 
 # Build stone.yaml from the current directory
-build: (_build build_file)
+build *args: (_build build_file args)
 
 # Chroot into target from stone.yaml recipe with boulder
 _chroot target:
