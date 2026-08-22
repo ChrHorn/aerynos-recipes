@@ -20,7 +20,6 @@
 			"depends": [
 				"binary(greetd)",
 				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
-				"polkit",
 				"soname(libEGL.so.1(x86_64))",
 				"soname(libGLESv2.so.2(x86_64))",
 				"soname(libc.so.6(x86_64))",
@@ -76,6 +75,6 @@
 		}
 	},
 	"source-name": "noctalia-greeter",
-	"source-release": "8",
-	"source-version": "1.2.1"
+	"source-release": "10",
+	"source-version": "1.3.1"
 }

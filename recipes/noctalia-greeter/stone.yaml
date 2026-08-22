@@ -1,9 +1,9 @@
 name        : noctalia-greeter
-version     : "1.2.1"
-release     : 8
+version     : "1.3.1"
+release     : 10
 homepage    : https://github.com/noctalia-dev/noctalia-greeter
 upstreams   :
-    - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.2.1.tar.gz : 1d1c43494b74e75f4f18c5c0d2f5326b9b3b30f337156c05c45d4511a9a587e1
+    - https://github.com/noctalia-dev/noctalia-greeter/archive/refs/tags/v1.3.1.tar.gz : c3a2fce1d15efcf9c87f22b149d03c7dd378f273290c1488190cf8445edbc14d
 summary     : Login greeter that matches the look and feel of Noctalia Shell.
 description : |
     
@@ -23,7 +23,6 @@ builddeps   :
     - stb
 rundeps     :
     - binary(greetd)
-    - polkit
 setup       : |
     %meson
 build       : |
