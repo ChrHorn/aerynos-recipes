@@ -3,12 +3,12 @@
 
 name        : umbriel
 version     : "0.1.0"
-release     : 12
+release     : 14
 homepage    : https://github.com/noctalia-dev/umbriel
 license     : MIT
 upstreams   :
     - git|https://github.com/noctalia-dev/umbriel:
-        ref: 8bdb8cc34c10678eacd2b5f57aa4ebf975deae94
+        ref: a607fdf72b2fcab3d5757e852e555c2eee74e7bc
 summary     : A Wayland compositor built on wlroots and SceneFX.
 description : |
     A Wayland compositor built on wlroots and SceneFX.
