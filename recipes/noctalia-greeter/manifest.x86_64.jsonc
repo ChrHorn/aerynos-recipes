@@ -7,17 +7,24 @@
 				"pkgconfig(cairo)",
 				"pkgconfig(fontconfig)",
 				"pkgconfig(freetype2)",
+				"pkgconfig(libinput)",
+				"pkgconfig(libjxl)",
 				"pkgconfig(librsvg-2.0)",
 				"pkgconfig(libwebp)",
+				"pkgconfig(libxml-2.0)",
 				"pkgconfig(nlohmann_json)",
 				"pkgconfig(pango)",
 				"pkgconfig(tomlplusplus)",
 				"pkgconfig(wayland-client)",
 				"pkgconfig(wayland-protocols)",
+				"pkgconfig(wayland-server)",
 				"pkgconfig(wlroots-0.20)",
+				"pkgconfig(xkbcommon)",
 				"stb"
 			],
 			"depends": [
+				"binary(dbus-run-session)",
+				"binary(gnome-keyring-daemon)",
 				"binary(greetd)",
 				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
 				"soname(libEGL.so.1(x86_64))",
@@ -31,6 +38,8 @@
 				"soname(libglib-2.0.so.0(x86_64))",
 				"soname(libgobject-2.0.so.0(x86_64))",
 				"soname(libinput.so.10(x86_64))",
+				"soname(libjxl.so.0.12(x86_64))",
+				"soname(libjxl_threads.so.0.12(x86_64))",
 				"soname(libm.so.6(x86_64))",
 				"soname(libpango-1.0.so.0(x86_64))",
 				"soname(libpangocairo-1.0.so.0(x86_64))",
@@ -43,7 +52,8 @@
 				"soname(libwayland-server.so.0(x86_64))",
 				"soname(libwebp.so.7(x86_64))",
 				"soname(libwlroots-0.20.so(x86_64))",
-				"soname(libxkbcommon.so.0(x86_64))"
+				"soname(libxkbcommon.so.0(x86_64))",
+				"soname(libxml2.so.16(x86_64))"
 			],
 			"files": [
 				"/usr/bin/noctalia-greeter",
@@ -51,8 +61,14 @@
 				"/usr/bin/noctalia-greeter-compositor",
 				"/usr/bin/noctalia-greeter-print-greetd-config",
 				"/usr/bin/noctalia-greeter-session",
+				"/usr/bin/noctalia-greeter-xsession",
 				"/usr/lib/systemd/system/noctalia-greeter.service",
 				"/usr/lib/tmpfiles.d/noctalia-greeter.conf",
+				"/usr/lib/userdb/24.group",
+				"/usr/lib/userdb/24.user",
+				"/usr/lib/userdb/noctalia-greeter.group",
+				"/usr/lib/userdb/noctalia-greeter.user",
+				"/usr/share/defaults/pam.d/noctalia-greeter",
 				"/usr/share/greetd/noctalia-greeter.toml",
 				"/usr/share/noctalia-greeter/assets/fonts/tabler-icons-license.txt",
 				"/usr/share/noctalia-greeter/assets/fonts/tabler.json",
@@ -70,11 +86,12 @@
 				"binary(noctalia-greeter-apply-appearance)",
 				"binary(noctalia-greeter-compositor)",
 				"binary(noctalia-greeter-print-greetd-config)",
-				"binary(noctalia-greeter-session)"
+				"binary(noctalia-greeter-session)",
+				"binary(noctalia-greeter-xsession)"
 			]
 		}
 	},
 	"source-name": "noctalia-greeter",
-	"source-release": "10",
-	"source-version": "1.3.1"
+	"source-release": "20",
+	"source-version": "1.7.0"
 }
