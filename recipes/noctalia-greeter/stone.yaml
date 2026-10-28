@@ -19,7 +19,6 @@ builddeps   :
     - pkgconfig(libjxl)
     - pkgconfig(librsvg-2.0)
     - pkgconfig(libwebp)
-    - pkgconfig(libwebp)
     - pkgconfig(libxml-2.0)
     - pkgconfig(nlohmann_json)
     - pkgconfig(pango)
@@ -34,6 +33,7 @@ rundeps     :
     - binary(dbus-run-session)
     - binary(gnome-keyring-daemon)
     - binary(greetd)
+    - linux-pam
 setup       : |
     %meson
 build       : |
@@ -43,10 +43,10 @@ install     : |
 
     # Userdb
     %install_file %(pkgdir)/noctalia-greeter.group %(installroot)%(libdir)/userdb/noctalia-greeter.group
-    ln -s noctalia-greeter.group %(installroot)%(libdir)/userdb/24.group
+    ln -s noctalia-greeter.group %(installroot)%(libdir)/userdb/25.group
 
     %install_file %(pkgdir)/noctalia-greeter.user %(installroot)%(libdir)/userdb/noctalia-greeter.user
-    ln -s noctalia-greeter.user %(installroot)%(libdir)/userdb/24.user
+    ln -s noctalia-greeter.user %(installroot)%(libdir)/userdb/25.user
 
     # Systemd
     %install_file %(pkgdir)/noctalia-greeter.service %(installroot)%(libdir)/systemd/system/noctalia-greeter.service
